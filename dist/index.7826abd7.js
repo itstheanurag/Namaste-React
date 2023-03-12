@@ -3009,51 +3009,135 @@ const Header = ()=>{
     }, undefined);
 };
 _c1 = Header;
-const RestaurantData = {
-    name: "Some Restaurant",
-    img: "https://marketplace.canva.com/EAFMvhEzAKw/1/0/1600w/canva-brown-simple-food-store-logo-LPHhlwzIoMQ.jpg",
-    place: [
-        "Patiala",
-        "Punjab"
-    ],
-    ratings: 4.2
-};
-const RestaurantCard = ()=>{
+const RestaurantData = [
+    {
+        name: "Some Restaurant",
+        img: "https://marketplace.canva.com/EAFMvhEzAKw/1/0/1600w/canva-brown-simple-food-store-logo-LPHhlwzIoMQ.jpg",
+        place: [
+            "Patiala",
+            "Punjab"
+        ],
+        ratings: 4.2
+    },
+    {
+        name: "Some Restaurant",
+        img: "https://marketplace.canva.com/EAFMvhEzAKw/1/0/1600w/canva-brown-simple-food-store-logo-LPHhlwzIoMQ.jpg",
+        place: [
+            "Patiala",
+            "Punjab"
+        ],
+        ratings: 4.2
+    },
+    {
+        name: "Some Restaurant",
+        img: "https://marketplace.canva.com/EAFMvhEzAKw/1/0/1600w/canva-brown-simple-food-store-logo-LPHhlwzIoMQ.jpg",
+        place: [
+            "Patiala",
+            "Punjab"
+        ],
+        ratings: 4.2
+    },
+    {
+        name: "Some Restaurant",
+        img: "https://marketplace.canva.com/EAFMvhEzAKw/1/0/1600w/canva-brown-simple-food-store-logo-LPHhlwzIoMQ.jpg",
+        place: [
+            "Patiala",
+            "Punjab"
+        ],
+        ratings: 4.2
+    },
+    {
+        name: "Some Restaurant",
+        img: "https://marketplace.canva.com/EAFMvhEzAKw/1/0/1600w/canva-brown-simple-food-store-logo-LPHhlwzIoMQ.jpg",
+        place: [
+            "Patiala",
+            "Punjab"
+        ],
+        ratings: 4.2
+    },
+    {
+        name: "Some Restaurant",
+        img: "https://marketplace.canva.com/EAFMvhEzAKw/1/0/1600w/canva-brown-simple-food-store-logo-LPHhlwzIoMQ.jpg",
+        place: [
+            "Patiala",
+            "Punjab"
+        ],
+        ratings: 4.2
+    },
+    {
+        name: "Some Restaurant",
+        img: "https://marketplace.canva.com/EAFMvhEzAKw/1/0/1600w/canva-brown-simple-food-store-logo-LPHhlwzIoMQ.jpg",
+        place: [
+            "Patiala",
+            "Punjab"
+        ],
+        ratings: 4.2
+    },
+    {
+        name: "Some Restaurant",
+        img: "https://marketplace.canva.com/EAFMvhEzAKw/1/0/1600w/canva-brown-simple-food-store-logo-LPHhlwzIoMQ.jpg",
+        place: [
+            "Patiala",
+            "Punjab"
+        ],
+        ratings: 4.2
+    },
+    {
+        name: "Some Restaurant",
+        img: "https://marketplace.canva.com/EAFMvhEzAKw/1/0/1600w/canva-brown-simple-food-store-logo-LPHhlwzIoMQ.jpg",
+        place: [
+            "Patiala",
+            "Punjab"
+        ],
+        ratings: 4.2
+    },
+    {
+        name: "Some Restaurant",
+        img: "https://marketplace.canva.com/EAFMvhEzAKw/1/0/1600w/canva-brown-simple-food-store-logo-LPHhlwzIoMQ.jpg",
+        place: [
+            "Patiala",
+            "Punjab"
+        ],
+        ratings: 4.2
+    }
+];
+const RestaurantCard = (restaurant)=>{
+    const { name , img , place , ratings  } = restaurant;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "card",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                src: RestaurantData.img
+                src: img
             }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 29,
+                lineNumber: 80,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                children: RestaurantData.name
+                children: name
             }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 30,
+                lineNumber: 81,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                children: RestaurantData.place.join(", ")
+                children: place.join(", ")
             }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 31,
+                lineNumber: 82,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                children: RestaurantData.ratings
+                children: ratings
             }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 32,
+                lineNumber: 83,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "App.js",
-        lineNumber: 28,
+        lineNumber: 79,
         columnNumber: 10
     }, undefined);
 };
@@ -3061,66 +3145,18 @@ _c2 = RestaurantCard;
 const Body = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "restaurant-list",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {}, void 0, false, {
+        children: RestaurantData.map((restaurant)=>{
+            return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {
+                ...restaurant
+            }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 37,
-                columnNumber: 9
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {}, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 38,
-                columnNumber: 9
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {}, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 39,
-                columnNumber: 9
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {}, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 40,
-                columnNumber: 9
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {}, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 41,
-                columnNumber: 9
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {}, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 42,
-                columnNumber: 9
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {}, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 43,
-                columnNumber: 9
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {}, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 44,
-                columnNumber: 9
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {}, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 45,
-                columnNumber: 9
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {}, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 46,
-                columnNumber: 9
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {}, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 47,
-                columnNumber: 9
-            }, undefined)
-        ]
-    }, void 0, true, {
+                lineNumber: 88,
+                columnNumber: 14
+            }, undefined);
+        })
+    }, void 0, false, {
         fileName: "App.js",
-        lineNumber: 36,
+        lineNumber: 87,
         columnNumber: 10
     }, undefined);
 };
@@ -3130,7 +3166,7 @@ const Footer = ()=>{
         children: "Some thing inside body"
     }, void 0, false, {
         fileName: "App.js",
-        lineNumber: 51,
+        lineNumber: 93,
         columnNumber: 10
     }, undefined);
 };
@@ -3140,17 +3176,17 @@ const AppLayOut = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Header, {}, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 55,
+                lineNumber: 97,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Body, {}, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 56,
+                lineNumber: 98,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Footer, {}, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 57,
+                lineNumber: 99,
                 columnNumber: 13
             }, undefined)
         ]
@@ -3160,7 +3196,7 @@ _c5 = AppLayOut;
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayOut, {}, void 0, false, {
     fileName: "App.js",
-    lineNumber: 61,
+    lineNumber: 103,
     columnNumber: 13
 }, undefined));
 var _c, _c1, _c2, _c3, _c4, _c5;

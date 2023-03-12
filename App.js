@@ -25,38 +25,84 @@ const Header = () => {
     )
 }
 
-const RestaurantData = {
+
+const RestaurantData = [{
     name: "Some Restaurant",
     img: 'https://marketplace.canva.com/EAFMvhEzAKw/1/0/1600w/canva-brown-simple-food-store-logo-LPHhlwzIoMQ.jpg',
     place: ['Patiala', 'Punjab'],
     ratings: 4.2
-}
+},
+{
+    name: "Some Restaurant",
+    img: 'https://marketplace.canva.com/EAFMvhEzAKw/1/0/1600w/canva-brown-simple-food-store-logo-LPHhlwzIoMQ.jpg',
+    place: ['Patiala', 'Punjab'],
+    ratings: 4.2
+},
+{
+    name: "Some Restaurant",
+    img: 'https://marketplace.canva.com/EAFMvhEzAKw/1/0/1600w/canva-brown-simple-food-store-logo-LPHhlwzIoMQ.jpg',
+    place: ['Patiala', 'Punjab'],
+    ratings: 4.2
+},
+{
+    name: "Some Restaurant",
+    img: 'https://marketplace.canva.com/EAFMvhEzAKw/1/0/1600w/canva-brown-simple-food-store-logo-LPHhlwzIoMQ.jpg',
+    place: ['Patiala', 'Punjab'],
+    ratings: 4.2
+}, {
+    name: "Some Restaurant",
+    img: 'https://marketplace.canva.com/EAFMvhEzAKw/1/0/1600w/canva-brown-simple-food-store-logo-LPHhlwzIoMQ.jpg',
+    place: ['Patiala', 'Punjab'],
+    ratings: 4.2
+}, {
+    name: "Some Restaurant",
+    img: 'https://marketplace.canva.com/EAFMvhEzAKw/1/0/1600w/canva-brown-simple-food-store-logo-LPHhlwzIoMQ.jpg',
+    place: ['Patiala', 'Punjab'],
+    ratings: 4.2
+}, {
+    name: "Some Restaurant",
+    img: 'https://marketplace.canva.com/EAFMvhEzAKw/1/0/1600w/canva-brown-simple-food-store-logo-LPHhlwzIoMQ.jpg',
+    place: ['Patiala', 'Punjab'],
+    ratings: 4.2
+}, {
+    name: "Some Restaurant",
+    img: 'https://marketplace.canva.com/EAFMvhEzAKw/1/0/1600w/canva-brown-simple-food-store-logo-LPHhlwzIoMQ.jpg',
+    place: ['Patiala', 'Punjab'],
+    ratings: 4.2
+}, {
+    name: "Some Restaurant",
+    img: 'https://marketplace.canva.com/EAFMvhEzAKw/1/0/1600w/canva-brown-simple-food-store-logo-LPHhlwzIoMQ.jpg',
+    place: ['Patiala', 'Punjab'],
+    ratings: 4.2
+}, {
+    name: "Some Restaurant",
+    img: 'https://marketplace.canva.com/EAFMvhEzAKw/1/0/1600w/canva-brown-simple-food-store-logo-LPHhlwzIoMQ.jpg',
+    place: ['Patiala', 'Punjab'],
+    ratings: 4.2
+}]
 
-const RestaurantCard = () => {
+const RestaurantCard = (restaurant) => {
+
+    const { name, img, place, ratings } = restaurant
     return (
         <div className='card'>
-            <img src={RestaurantData.img} />
-            <h2>{RestaurantData.name}</h2>
-            <h3>{RestaurantData.place.join(", ")}</h3>
-            <h4>{RestaurantData.ratings}</h4>
+            <img src={img} />
+            <h2>{name}</h2>
+            <h3>{place.join(', ')}</h3>
+            <h4>{ratings}</h4>
         </div>
     )
 }
 
 const Body = () => {
-    return <div className='restaurant-list'>
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-    </div>
+    return (
+        <div className='restaurant-list'>{
+            RestaurantData.map((restaurant) => {
+                return <RestaurantCard {...restaurant} />
+            })
+        }
+        </div>
+    )
 }
 
 const Footer = () => {
