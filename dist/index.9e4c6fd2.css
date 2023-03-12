@@ -1,0 +1,26 @@
+.header {
+  border-radius: 4px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px;
+  padding: 0 10px;
+  display: flex;
+  box-shadow: 0 4px 8px #0003, 0 6px 20px #00000030;
+}
+
+.logo {
+  width: 100px;
+  height: 75px;
+}
+
+.nav-items > ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.nav-items > ul > li {
+  padding: 10px;
+}
+
+/*# sourceMappingURL=index.9e4c6fd2.css.map */

@@ -1,0 +1,25 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    margin: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 0 10px;
+    border-radius: 4px;
+}
+
+.logo {
+    width: 100px;
+    height: 75px;
+}
+
+.nav-items > ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-items > ul > li {
+    padding: 10px
+}
