@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .header {
     display: flex;
     flex-direction: row;
@@ -6,7 +12,7 @@
     justify-content: space-between;
     margin: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    padding: 0 10px;
+    padding:10px;
     border-radius: 4px;
 }
 
@@ -22,4 +28,37 @@
 
 .nav-items > ul > li {
     padding: 10px
+}
+
+.card {
+    width: 200px;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 5px 15px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.card > img {
+    width: 100%;
+}
+
+.card > h2 {
+    font-size: large;
+}
+.card > h3 {
+    font-size: medium;
+}
+.card > h4 {
+    font-size: small;
+}
+
+.restaurant-list {
+    margin: 40px auto;
+    padding-left: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    /* justify-content: center; */
 }

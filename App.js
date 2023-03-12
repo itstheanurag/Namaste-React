@@ -25,8 +25,38 @@ const Header = () => {
     )
 }
 
+const RestaurantData = {
+    name: "Some Restaurant",
+    img: 'https://marketplace.canva.com/EAFMvhEzAKw/1/0/1600w/canva-brown-simple-food-store-logo-LPHhlwzIoMQ.jpg',
+    place: ['Patiala', 'Punjab'],
+    ratings: 4.2
+}
+
+const RestaurantCard = () => {
+    return (
+        <div className='card'>
+            <img src={RestaurantData.img} />
+            <h2>{RestaurantData.name}</h2>
+            <h3>{RestaurantData.place.join(", ")}</h3>
+            <h4>{RestaurantData.ratings}</h4>
+        </div>
+    )
+}
+
 const Body = () => {
-    return <h1>Some thing inside body</h1>
+    return <div className='restaurant-list'>
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+        <RestaurantCard />
+    </div>
 }
 
 const Footer = () => {

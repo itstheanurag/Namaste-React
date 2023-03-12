@@ -1,10 +1,16 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .header {
   border-radius: 4px;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin: 5px;
-  padding: 0 10px;
+  padding: 10px;
   display: flex;
   box-shadow: 0 4px 8px #0003, 0 6px 20px #00000030;
 }
@@ -21,6 +27,39 @@
 
 .nav-items > ul > li {
   padding: 10px;
+}
+
+.card {
+  width: 200px;
+  border: 1px solid #000;
+  border-radius: 8px;
+  margin: 20px;
+  padding: 10px;
+  box-shadow: 0 4px 8px #0003, 0 5px 15px #00000030;
+}
+
+.card > img {
+  width: 100%;
+}
+
+.card > h2 {
+  font-size: large;
+}
+
+.card > h3 {
+  font-size: medium;
+}
+
+.card > h4 {
+  font-size: small;
+}
+
+.restaurant-list {
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 40px auto;
+  padding-left: 40px;
+  display: flex;
 }
 
 /*# sourceMappingURL=index.9e4c6fd2.css.map */
