@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&family=Teko&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Teko', sans-serif;
 }
 
 .header {
@@ -61,4 +64,23 @@
     flex-wrap: wrap;
     align-items: center;
     /* justify-content: center; */
+}
+
+.footer-list {
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 -6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+ul {
+    list-style: none;
+}
+
+.footer-list > ul > li > h1 {
+    font-size: large;
+    margin: 50px;
 }
