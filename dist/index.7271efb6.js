@@ -27456,7 +27456,7 @@ var _constant = require("../constant");
 var _s = $RefreshSig$();
 function filterData(input, restaurants) {
     return restaurants.filter((restaurant)=>{
-        return restaurant.locations.includes(input) || restaurant.name.includes(input);
+        return restaurant.locations.includes(input) || restaurant.name.includes(input) || restaurant.speciality.includes(input) || restaurant.last_name.includes(input);
     });
 }
 const Body = ()=>{
@@ -27484,9 +27484,9 @@ const Body = ()=>{
                         className: "search-button",
                         type: "submit",
                         onClick: ()=>{
-                            const dataFiltered = filterData(searchText, restaurants);
+                            const input = searchText.charAt(0).toUpperCase() + searchText.slice(1);
+                            const dataFiltered = filterData(input, restaurants);
                             setRestaurants(dataFiltered);
-                            console.log(dataFiltered);
                             setSearchText("");
                         },
                         children: "Search"

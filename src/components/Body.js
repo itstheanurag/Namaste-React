@@ -5,7 +5,7 @@ import { useState } from "react";
 function filterData(input, restaurants) {
 
     return restaurants.filter((restaurant) => {
-        return restaurant.locations.includes(input) || restaurant.name.includes(input)
+        return restaurant.locations.includes(input) || restaurant.name.includes(input) || restaurant.speciality.includes(input) || restaurant.last_name.includes(input)
     })
 
 
@@ -17,13 +17,14 @@ const Body = () => {
     return (<>
         <div className="search">
 
-            <input className="serach-input" value={searchText} placeholder="Search by Country" onChange={
+            <input className="serach-input" value={searchText} placeholder="Search by Country, Name, Or Food" onChange={
                 (event) => {
                     setSearchText(event.target.value);
                 }} />
             <button className="search-button" type="submit" onClick={
                 () => {
-                    const dataFiltered = filterData(searchText, restaurants);
+                    const input = searchText.charAt(0).toUpperCase() + searchText.slice(1)
+                    const dataFiltered = filterData(input, restaurants);
                     setRestaurants(dataFiltered)
                     console.log(dataFiltered)
                     setSearchText('');
