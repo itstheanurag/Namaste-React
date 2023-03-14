@@ -27463,67 +27463,77 @@ const Body = ()=>{
     _s();
     const [restaurants, setRestaurants] = (0, _react.useState)((0, _constant.RestaurantData));
     const [searchText, setSearchText] = (0, _react.useState)("");
+    const [filteredRestaurants, setFilteredRestaurants] = (0, _react.useState)([]); // add a new state to hold filtered data
+    const handleSearch = ()=>{
+        const input = searchText.charAt(0).toUpperCase() + searchText.slice(1);
+        const dataFiltered = filterData(input, restaurants);
+        setFilteredRestaurants(dataFiltered); // update the new state instead of updating the original "restaurants" state
+        setSearchText("");
+    };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "search",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                        className: "serach-input",
+                        className: "search-input",
                         value: searchText,
-                        placeholder: "Search by Country",
+                        placeholder: "Search by Country, Name or Food",
                         onChange: (event)=>{
                             setSearchText(event.target.value);
                         }
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 15,
-                        columnNumber: 13
+                        lineNumber: 22,
+                        columnNumber: 17
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                         className: "search-button",
                         type: "submit",
-                        onClick: ()=>{
-                            const input = searchText.charAt(0).toUpperCase() + searchText.slice(1);
-                            const dataFiltered = filterData(input, restaurants);
-                            setRestaurants(dataFiltered);
-                            setSearchText("");
-                        },
+                        onClick: handleSearch,
                         children: "Search"
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 18,
-                        columnNumber: 13
+                        lineNumber: 25,
+                        columnNumber: 17
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Body.js",
-                lineNumber: 13,
-                columnNumber: 9
+                lineNumber: 21,
+                columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "restaurant-list",
-                children: restaurants.map((restaurant)=>{
-                    return /*#__PURE__*/ (0, _react.createElement)((0, _restaurantCardDefault.default), {
+                children: filteredRestaurants.length > 0 // render the filtered restaurants if there are any, otherwise render the original list
+                 ? filteredRestaurants.map((restaurant)=>/*#__PURE__*/ (0, _react.createElement)((0, _restaurantCardDefault.default), {
                         ...restaurant,
-                        key: restaurant["restaurant_id"],
+                        key: restaurant.restaurant_id,
                         __source: {
                             fileName: "src/components/Body.js",
-                            lineNumber: 27,
-                            columnNumber: 16
+                            lineNumber: 32,
+                            columnNumber: 47
                         },
                         __self: undefined
-                    });
-                })
+                    })) : restaurants.map((restaurant)=>/*#__PURE__*/ (0, _react.createElement)((0, _restaurantCardDefault.default), {
+                        ...restaurant,
+                        key: restaurant.restaurant_id,
+                        __source: {
+                            fileName: "src/components/Body.js",
+                            lineNumber: 32,
+                            columnNumber: 146
+                        },
+                        __self: undefined
+                    }))
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 26,
-                columnNumber: 9
+                lineNumber: 30,
+                columnNumber: 13
             }, undefined)
         ]
     }, void 0, true);
 };
-_s(Body, "NzQvhGRptTd1RZtGXyMFBN1eFSA=");
+_s(Body, "xzIDkKaAozWIuKzBXO29K/4+4qQ=");
 _c = Body;
 exports.default = Body;
 var _c;

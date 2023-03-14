@@ -26,7 +26,7 @@ const Body = () => {
                 <input
                     className="search-input"
                     value={searchText}
-                    placeholder="Search by Country"
+                    placeholder="Search by Country, Name or Food"
                     onChange={(event) => {
                         setSearchText(event.target.value);
                     }}
@@ -39,12 +39,12 @@ const Body = () => {
             <div className="restaurant-list">
                 {
                     filteredRestaurants.length > 0 // render the filtered restaurants if there are any, otherwise render the original list
-                    ? filteredRestaurants.map((restaurant) => (
-                        <RestaurantCard {...restaurant} key={restaurant.restaurant_id} />
-                    ))
-                    : restaurants.map((restaurant) => (
-                        <RestaurantCard {...restaurant} key={restaurant.restaurant_id} />
-                    ))
+                        ? filteredRestaurants.map((restaurant) => (
+                            <RestaurantCard {...restaurant} key={restaurant.restaurant_id} />
+                        ))
+                        : restaurants.map((restaurant) => (
+                            <RestaurantCard {...restaurant} key={restaurant.restaurant_id} />
+                        ))
                 }
             </div>
         </>
