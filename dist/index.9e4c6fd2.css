@@ -56,12 +56,48 @@
   font-size: small;
 }
 
+.card > span {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
 .restaurant-list {
   flex-wrap: wrap;
   align-items: center;
   margin: 40px auto;
   padding-left: 40px;
   display: flex;
+}
+
+.search {
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  display: flex;
+}
+
+.search > input {
+  width: 450px;
+  height: 30px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  margin-right: 10px;
+  padding-left: 10px;
+  font-size: medium;
+}
+
+.search-button:hover {
+  cursor: pointer;
+}
+
+.search-button {
+  height: 30px;
+  background-color: #0000;
+  border: 1px solid #000;
+  border-radius: 4px;
+  padding: 0 10px;
+  font-size: medium;
 }
 
 .footer-list {
