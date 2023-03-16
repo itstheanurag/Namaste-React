@@ -1,6 +1,6 @@
 import RestaurantCard from "./RestaurantCard";
 import { RestaurantData } from "../constant";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function filterData(input, restaurants) {
     return restaurants.filter((restaurant) => {
